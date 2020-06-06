@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="initial-scale=1.0">
+
+
+   <meta name="description" content="Sovietwave Radio 24/7 Live Stream">
+   <meta name="keywords"
+      content="sovietwave mix,sovietwave,sovietwave radio,synthwave,soviet wave,советвейв,retrofuturism,retrowave,80s,music,советская волна,soviet,chillwave,synthwave mix,russian synthwave,ussr,mixtape,radio,dreamwave,newsovietwave,new soviet wave">
+
+   <meta property="og:image" content="img/radio.png">
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="Sovietwave Radio">
+   <meta name="application-name" content="Sovietwave Radio">
+   <meta name="yandex-verification" content="44029181b16df236" />
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+   <script src="js/jquery.js" type="text/javascript"></script>
+
+   <style type="text/css">
+      html {
+         background: url("img/back.jpg") no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+      }
+
+      @media (min-width:320px) and (max-width:500px) {
+         html {
+            background-image: url("img/lil_back.jpg");
+         }
+      }
+
+      /* .my_visualizer
+        {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-left: 15%;
+            margin: auto;
+        }*/
+      /* * { box-sizing: border-box; }
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -99;
+        }
+        .video-foreground,
+        .video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .video-foreground { height: 300%; top: -100%; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            .video-foreground { width: 300%; left: -100%; }
+        }*/
+   </style>
+
+   <title>🚀 Sovietwave Radio 24/7 Live Stream 🚀</title>
+</head>
+
+<body>
+   <!--
+<div class="video-background">
+    <div class="video-foreground">
+        <iframe src="https://www.youtube.com/embed/3h5xb-rXUZA?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=3h5xb-rXUZA" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+-->
+
+   <!--PLAYER - Блок расположения плеера. Плееры: default, lite, energy или custom (свой плеер) (можно несколько) -->
+   <div id="my_player" class="my_player" data-player="adaptive" data-skin="" data-width=200 data-autoplay=1
+      data-volume=80 data-streamurl="https://myradio24.org/sovietwave"></div>
+   <style>
+      .my_player_adaptive {
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 55px;
+         line-height: 1.2;
+         background: red;
+         z-index: 10000;
+         border-top: 1px solid #dddddd;
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .my_player_adaptive .my_player_body {
+         width: 100%;
+         margin: 0 auto;
+         max-width: 1000px;
+         padding: 0 20px;
+         position: relative;
+         box-sizing: border-box;
+      }
+
+      .my_player_adaptive .my_cover {
+         display: none;
+      }
+
+      .my_player_adaptive .my_cover:hover {
+         z-index: 20000;
+         width: 200px;
+         height: 200px;
+         margin-top: -150px;
+         margin-right: -145px;
+      }
+
+      .my_player_adaptive .my_play {
+         transition: 0.3s;
+         float: left;
+         width: 55px;
+         height: 55px;
+         margin-right: 10px;
+         background: url(//myradio24.com/img/play.png) no-repeat center;
+         background-size: 65%;
+         background-position: 55% 50%;
+         opacity: .3;
+         cursor: pointer;
+      }
+
+      .my_player_adaptive .my_play:hover {
+         opacity: .7;
+      }
+
+      .my_player_adaptive .my_playing {
+         transition: 0.3s;
+         background-image: url(//myradio24.com/img/pause.png);
+      }
+
+      .my_player_adaptive .my_timer {
+         display: none;
+      }
+
+      .my_player_adaptive .my_songinfo {
+         float: left;
+         position: relative;
+         font-size: 14px;
+         font-weight: 400;
+         color: #FCFF33;
+         height: 55px;
+         max-width: 60%;
+      }
+
+      .my_player_adaptive .my_artist {
+         float: left;
+         position: relative;
+         margin-top: 9px;
+         color: #FCFF33;
+         width: 100%;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+      }
+
+      .my_player_adaptive .my_songtitle {
+         float: left;
+         position: relative;
+         width: 100%;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         margin-top: 3px;
+      }
+
+      .my_player_adaptive .my_volumeplayer {
+         float: right;
+         width: 55px;
+         height: 55px;
+         cursor: pointer;
+         opacity: .3;
+         position: relative;
+         background: url(//myradio24.com/player/adaptive/volume.svg) no-repeat center;
+         background-size: 40%;
+      }
+
+      .my_player_adaptive .my_volumeplayer:hover {
+         opacity: 1;
+      }
+
+      .my_player_adaptive .my_volumediv {
+         position: absolute;
+         bottom: 45px;
+         left: 50%;
+         margin-left: -15px;
+         width: 30px;
+         height: 120px;
+         background: #fff;
+         display: none;
+         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .24), 0 0 2px 0 rgba(0, 0, 0, .12);
+         border-radius: 2px;
+         border: 1px solid #eee;
+         z-index: 999;
+         box-sizing: border-box;
+         padding: 10px;
+      }
+
+      .my_player_adaptive .my_volumeplayer:hover .my_volumediv {
+         display: block;
+      }
+
+      .my_player_adaptive .my_volume {
+         transition: 0.3s;
+         position: absolute;
+         bottom: -10px;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: #666;
+         border-radius: 5px;
+      }
+
+      .my_player_adaptive .my_volumebody {
+         float: left;
+         position: relative;
+         width: 100%;
+         height: 100%;
+         background: #ddd;
+         border-radius: 5px;
+         overflow: hidden;
+      }
+
+      @media screen and (max-width:700px) {
+         .my_player_adaptive .my_player_body {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+         }
+
+         .my_player_adaptive .my_timer {
+            display: none;
+         }
+      }
+   </style>
+   <!--END PLAYER-->
+
+
+   <!--Этот скрипт должен располагаться в самом низу после всех блоков и не должен повторяться на странице. -->
+   <script src="//myradio24.com/player/player.js?v3.18" data-port="sovietwave" data-interval=10 data-vmid=0></script>
+
+   <!-- Yandex.Metrika counter -->
+   <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+         m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+         m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
+         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(62461045, "init", {
+         clickmap: true,
+         trackLinks: true,
+         accurateTrackBounce: true
+      });
+   </script>
+   <noscript>
+      <div><img src="https://mc.yandex.ru/watch/62461045" style="position:absolute; left:-9999px;" alt="" /></div>
+   </noscript>
+   <!-- /Yandex.Metrika counter -->
+
+</body>
+
+</html>
